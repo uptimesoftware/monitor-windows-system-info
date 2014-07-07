@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" target_grouping="other">
+	<class>Windows System Information</class>
+	<exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
+	<erdc_version>2.0</erdc_version>
+	<category>Operating System Monitors</category>
+	<category_related>Applications - General</category_related>
+	<grid_info>
+		<supported_versions>7.3</supported_versions>
+		<supported_platforms>windows</supported_platforms>
+		<upgrade_in_place>true</upgrade_in_place>
+		<requires_agent_scripts>false</requires_agent_scripts>
+	</grid_info>	
+	<elements>
+		<element name="process_windows" parameter_type="input" data_type="string" gui_basic="1" range_type="0" hidden="true">
+			<control_options> size:40 </control_options>
+			<default_value>plugins/scripts/monitor-windows-system-info/monitor-windows-system-info.bat</default_value>
+			<short_description>Script Name</short_description>
+			<long_description>Name of the script/binary/process to be executed by up.time </long_description>
+			<validation_rule>
+				<alphanumeric/>
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<string/>
+			</gui_type>
+		</element>
+		<element name="USER_DOMAIN" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:20</control_options>
+            <default_value></default_value>
+            <validation_rule/><error_message/>
+            <short_description>User Domain</short_description>
+            <long_description>User Domain</long_description>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>                
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+        <element name="USERNAME" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:20</control_options>
+            <default_value></default_value>
+            <validation_rule/><error_message/>
+            <short_description>Username</short_description>
+            <long_description>Username</long_description>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>                 
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+        <element name="PASSWORD" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:20</control_options>
+            <default_value></default_value>
+            <validation_rule/><error_message/>
+            <short_description>Password</short_description>
+            <long_description>Password</long_description>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>                 
+            <gui_type>
+                <password/>
+            </gui_type>
+        </element>
+        <element name="OS_NAME" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>OS Name</short_description>
+            <long_description>OS Name</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="OS_VERSION" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>OS Version</short_description>
+            <long_description>OS Version</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="OS_MANUFACTURER" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>OS Manufacturer</short_description>
+            <long_description>OS Manufacturer</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="OS_CONFIGURATION" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>OS Configuration</short_description>
+            <long_description>OS Configuration</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="OS_BUILD_TYPE" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>OS Build Type</short_description>
+            <long_description>OS Build Type</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="ORIGINAL_INTSTALL_DATE" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Original Install Date</short_description>
+            <long_description>Original Install Date</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="SYSTEM_BOOT_TIME" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>System Boot Time</short_description>
+            <long_description>System Boot Time</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="SYSTEM_MANUFACTURER" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>System Manufacturer</short_description>
+            <long_description>System Manufacturer</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="SYSTEM_MODEL" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>System Model</short_description>
+            <long_description>System Model</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="SYSTEM_TYPE" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>System Type</short_description>
+            <long_description>System Type</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="PROCESSOR" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Processor</short_description>
+            <long_description>Processor</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="TIME_ZONE" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Time Zone</short_description>
+            <long_description>Time Zone</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="TOTAL_PHYSICAL_MEMORY" parameter_type="output" data_type="integer" gui_basic="1" units="MB" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Total Physical Memory</short_description>
+            <long_description>Total Physical Memory</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+		<element name="AVAILABLE_PHYSICAL_MEMORY" parameter_type="output" data_type="integer" gui_basic="1" units="MB" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Available Physical Memory</short_description>
+            <long_description>Available Physical Memory</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+		<element name="VIRTUAL_MEMORY_MAX_SIZE" parameter_type="output" data_type="integer" gui_basic="1" units="MB" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Virtual Memory - Max Size</short_description>
+            <long_description>Virtual Memory - Max Size</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+		<element name="VIRTUAL_MEMORY_AVAILABLE" parameter_type="output" data_type="integer" gui_basic="1" units="MB" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Virtual Memory - Available</short_description>
+            <long_description>Virtual Memory - Available</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+		<element name="VIRTUAL_MEMORY_IN_USE" parameter_type="output" data_type="integer" gui_basic="1" units="MB" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Virtual Memory - In Use</short_description>
+            <long_description>Virtual Memory - In Use</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+		<element name="DOMAIN" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Domain</short_description>
+            <long_description>Domain</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="LOGON_SERVER" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Logon Server</short_description>
+            <long_description>Logon Server</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="timer" parameter_type="output" data_type="integer" gui_basic="0" range_type="0" units="ms">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Response time</short_description>
+			<long_description>Response time in ms</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type><integer/></gui_type>
+		</element>		
+    </elements>
+	<help>Run systeminfo command on remote hosts.</help>
+</uptime>
