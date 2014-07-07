@@ -1,3 +1,2 @@
 @ECHO OFF
-set PHPDIR=..\..\apache\php\
-"%PHPDIR%\php.exe" monitor-jboss.php %1%
+cscript /nologo monitor-windows-system-info.vbs
