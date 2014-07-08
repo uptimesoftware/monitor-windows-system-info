@@ -116,7 +116,7 @@
                 <string/>
             </gui_type>
         </element>
-		<element name="ORIGINAL_INTSTALL_DATE" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+		<element name="ORIGINAL_INSTALL_DATE" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
             <control_options>size:10</control_options>
             <short_description>Original Install Date</short_description>
             <long_description>Original Install Date</long_description>
