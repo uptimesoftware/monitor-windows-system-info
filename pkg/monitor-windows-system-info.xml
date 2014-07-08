@@ -2,7 +2,7 @@
 <uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" target_grouping="other">
 	<class>Windows System Information</class>
 	<exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
-	<erdc_version>2.0</erdc_version>
+	<erdc_version>1.0</erdc_version>
 	<category>Operating System Monitors</category>
 	<category_related>Applications - General</category_related>
 	<grid_info>
@@ -166,7 +166,7 @@
                 <string/>
             </gui_type>
         </element>
-		<element name="PROCESSOR" parameter_type="output" data_type="string" gui_basic="1" range_type="0">
+		<element name="PROCESSOR" parameter_type="output" data_type="ranged" gui_basic="1" range_type="0">
             <control_options>size:10</control_options>
             <short_description>Processor</short_description>
             <long_description>Processor</long_description>
@@ -266,5 +266,5 @@
 			<gui_type><integer/></gui_type>
 		</element>		
     </elements>
-	<help>Run systeminfo command on remote hosts.</help>
+	<help>Get systeminfo command output.</help>
 </uptime>
